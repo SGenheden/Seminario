@@ -45,4 +45,5 @@ def seminario_ff() :
                                     args.bonds, args.scaling)
 
     if args.angles is not None:
-        print("\nSorry. Unfortunately the angle code is not implemented yet.")
+        forcefield.make_angled_ff(struct, xyz_orig, hess,
+                                    args.angles, args.scaling)

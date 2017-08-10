@@ -5,6 +5,6 @@ using the method of Seminario
 
 __author__ = 'Samuel Genheden'
 __all__ = ['gaussian', 'forcefield', 'tools']
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 from seminario import gaussian, forcefield, tools
