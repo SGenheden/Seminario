@@ -11,7 +11,8 @@ def seminario_ff() :
     """
 
     import argparse
-
+    import os
+    
     import numpy as np
     import parmed
 

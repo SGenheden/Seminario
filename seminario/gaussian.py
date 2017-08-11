@@ -18,9 +18,9 @@ def parse_fchk(filename):
 
     Returns
     -------
-    ndarray
+    numpy.ndarray
         the optimized xyz coordinates in the checkpoint file
-    ndarray
+    numpy.ndarray
         the Hessian matrix in the checkpoint file
     """
     def _parse_array(f, startline, endline):
