@@ -1,6 +1,7 @@
 """
 This module contains a function to read Gaussian09 output file
 """
+from __future__ import division, print_function, absolute_import
 
 import numpy as np
 
@@ -52,4 +53,5 @@ def parse_fchk(filename):
             hess_sqr[k,j] = hess[i]
             i += 1
 
-    return crds, hess_sqr
+    natoms = int(n / 3)
+    return crds.reshape([natoms,3]), hess_sqr
