@@ -3,6 +3,10 @@ Seminario
 
 A tool to compute bond and angle force field parameters with the Seminario method.
 
+Badges
+======
+[![Build/Test Status](https://travis-ci.org/SGenheden/Seminario.svg?branch=master)](https://travis-ci.org/SGenheden/Seminario)
+
 Description
 ===========
 Seminario is a tool estimate force fields parameters using the method of Seminario:
