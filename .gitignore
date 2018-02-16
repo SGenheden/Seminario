@@ -2,3 +2,4 @@
 build/
 dist/
 Seminario.egg-info/
+__pycache__
