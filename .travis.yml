@@ -9,6 +9,6 @@ install:
     - pip install .
     - python -c "import seminario; print(seminario.__version__)"
 script:
-    - pytest --cov=seminario
+    - pytest --cov=seminario/
 after_success:
     - coveralls
