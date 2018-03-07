@@ -7,3 +7,5 @@ install:
     - python -c "import seminario; print(seminario.__version__)"
 script:
     - pytest
+after_success:
+    - coveralls
