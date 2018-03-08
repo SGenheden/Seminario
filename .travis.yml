@@ -3,12 +3,11 @@ python:
     - "2.7"
     - "3.6"
 install:
-    - pip install pytest
-    - pip install pytest-cov
     - pip install coveralls
     - pip install .
     - python -c "import seminario; print(seminario.__version__)"
 script:
-    - pytest --cov=seminario/
+    - pytest
+    - coverage run --source=zmat tests/test_basics.py
 after_success:
     - coveralls
