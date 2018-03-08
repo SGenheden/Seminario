@@ -8,6 +8,7 @@ install:
     - python -c "import seminario; print(seminario.__version__)"
 script:
     - pytest
-    - coverage run --source=seminario tests/test_basics.py
 after_success:
+    - cd tests
+    - coverage run --source=seminario test_basics.py
     - coveralls
