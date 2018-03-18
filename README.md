@@ -5,7 +5,7 @@ A tool to compute bond and angle force field parameters with the Seminario metho
 
 Badges
 ======
-[![Build/Test Status](https://travis-ci.org/SGenheden/Seminario.svg?branch=master)](https://travis-ci.org/SGenheden/Seminario)
+[![Build/Test Status](https://travis-ci.org/SGenheden/Seminario.svg?branch=master)](https://travis-ci.org/SGenheden/Seminario) [![Coverage Status](https://coveralls.io/repos/github/SGenheden/Seminario/badge.svg)](https://coveralls.io/github/SGenheden/Seminario)
 
 Description
 ===========
