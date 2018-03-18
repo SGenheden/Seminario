@@ -14,6 +14,8 @@ fchk_filename = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 "..","examples","model.fchk")
 gro_filename = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 "..","examples","model.gro")
+opt_filename = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "..","examples","model_opt.gro")
 
 class PutOutput(object) :
 
@@ -130,8 +132,8 @@ Angle	idx1	idx2	idx3	theta(x-ray)	theta(opt)	k [kJ/mol]
         stdout_orig = sys.stdout
         sys.stdout = PutOutput()
 
-        sys.argv = ["seminario_ff", "-f", "../examples/model.fchk", "-s",
-                    "../examples/model.gro", "-a",
+        sys.argv = ["seminario_ff", "-f", fchk_filename, "-s",
+                    gro_filename, "-a",
                     ":1@CG-:1@ND1-:3@CU", "-b", ":1@N-:3@CU","--saveopt"]
         seminario.tools.seminario_ff()
         expected_out = """Bond	idx1	idx2	r(x-ray)	r(opt) [nm]	k [kJ/mol/nm2]
@@ -142,13 +144,13 @@ Angle	idx1	idx2	idx3	theta(x-ray)	theta(opt)	k [kJ/mol]
         sys.stdout = stdout_orig
 
         self.assertEqual(expected_out, actual_out)
-        
+
         for i in range(10) :
             time.sleep(1)
-            if os.path.exists("../examples/model_opt.gro") :
+            if os.path.exists(opt_filename) :
                 break
-        self.assertTrue(os.path.exists("../examples/model_opt.gro"))
-        os.remove("../examples/model_opt.gro")
+        self.assertTrue(os.path.exists(opt_filename))
+        os.remove(opt_filename)
 
 
 if __name__ == '__main__':
