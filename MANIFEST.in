@@ -1,0 +1,4 @@
+graft examples
+graft seminario
+include versioneer.py
+include seminario/_version.py

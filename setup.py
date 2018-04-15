@@ -3,9 +3,12 @@ import os
 
 from setuptools import setup
 
+import versioneer
+
 setup (
     name='Seminario',
-    version='1.0.0',
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     description='Tool to use the Seminario method',
     long_description=open('README.md').read(),
     url='https://github.com/sgenheden/Seminario',
